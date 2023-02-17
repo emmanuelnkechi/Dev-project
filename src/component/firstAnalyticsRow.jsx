@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import user from "../assets/images/2.webp";
 
 const FirstAnalyticsRow = () => {
   return (
@@ -7,7 +8,7 @@ const FirstAnalyticsRow = () => {
         <div className="row__first-column">
           <div>
             <div className="row__image-section">
-              <img />
+              <img src={user} alt="user" />
             </div>
           </div>
 
@@ -54,7 +55,7 @@ const FirstAnalyticsRow = () => {
           </div>
 
           <div className="row__stake-picture">
-            <img />
+            <img src={user} alt="user" />
           </div>
         </div>
 
@@ -100,6 +101,7 @@ const StyledRow = styled.div`
       border-radius: 0.8rem;
       padding: 1rem 1rem;
       text-align: center;
+      height: 13rem;
     }
 
     &__connect-button {
@@ -132,11 +134,15 @@ const StyledRow = styled.div`
     }
 
     &__image-section {
-      margin: 1rem auto;
-      width: 4.5rem;
-      height: 4.5rem;
-      border-radius: 50%;
-      background-color: #23232d;
+      margin: 0rem auto;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+      }
     }
 
     &__second-column {
@@ -145,6 +151,8 @@ const StyledRow = styled.div`
       border-radius: 0.8rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      height: 13rem;
     }
 
     &__stake-header {
@@ -171,9 +179,13 @@ const StyledRow = styled.div`
     }
 
     &__stake-picture {
-      height: 100%;
       border-radius: 0.5rem;
-      background-color: #281236;
+      height: 13rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &__third-column {
@@ -181,6 +193,7 @@ const StyledRow = styled.div`
       border-radius: 0.8rem;
       padding: 1rem 1rem;
       color: #ababb5;
+      height: 13rem;
     }
   }
 
@@ -188,12 +201,31 @@ const StyledRow = styled.div`
     .row {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.4rem;
+      gap: 3rem;
+
+      &__first-column {
+        height: 100%;
+      }
+
+      &__third-column {
+        height: 100%;
+      }
 
       &__second-column {
         border-radius: 0.8rem;
         display: grid;
         grid-template-columns: 1fr;
+        height: 100%;
+      }
+
+      &__stake-picture {
+        border-radius: 0.5rem;
+        height: 13rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -202,12 +234,31 @@ const StyledRow = styled.div`
     .row {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.4rem;
+      gap: 3rem;
+
+      &__first-column {
+        height: 100%;
+      }
+
+      &__third-column {
+        height: 100%;
+      }
 
       &__second-column {
         border-radius: 0.8rem;
         display: grid;
         grid-template-columns: 1fr;
+        height: 100%;
+      }
+
+      &__stake-picture {
+        border-radius: 0.5rem;
+        height: 13rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

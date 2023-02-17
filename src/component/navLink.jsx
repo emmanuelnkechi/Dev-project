@@ -26,7 +26,7 @@ const StyledLink = styled.div`
     gap: 1rem;
     justify-content: left;
     padding: 0.2rem 0.6rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.6;
 
     &__icon {
@@ -36,13 +36,23 @@ const StyledLink = styled.div`
       border: 1px solid #b2b8ba;
     }
   }
+
+  a:hover {
+    color: #d9b954;
+    font-weight: 600;
+
+    .link__icon {
+      border: 1px solid #d9b954;
+    }
+  }
   .active {
-    border-bottom: 1px solid #f6f6f6;
-    border-right: 1px solid #3c3c3c;
-    border-left: 1px solid #4f4f4f;
-    border-top: 1px solid #232323;
+    font-weight: 600;
     opacity: 1;
-    border-radius: 0.1rem;
+    color: #1a83fe;
+
+    .link__icon {
+      border: 1px solid #1a83fe;
+    }
   }
 
   @media only screen and (min-width: 280px) and (max-width: 767px) {
@@ -55,12 +65,8 @@ const StyledLink = styled.div`
     }
 
     .active {
-      border-bottom: 1px solid #1a83fe;
-      border-right: 1px solid #1a83fe;
-      border-left: 1px solid #1a83fe;
-      border-top: 1px solid #1a83fe;
       opacity: 1;
-      border-radius: 0.1rem;
+      font-weight: 600;
     }
   }
 

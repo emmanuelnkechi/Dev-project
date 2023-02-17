@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import NavLink from "./navLink";
+import user from "../assets/images/2.webp";
 
 const SideBar = () => {
   return (
     <StyledSidebar>
       <div className="sidebar">
+        <div className="sidebar__brand">
+          <img src={user} alt="user" />
+          <div className="sidebar__brand--name">Brand Name</div>
+        </div>
         <NavLink linkName="Dashboard" to="/" />
         <NavLink linkName="Active Bids" to="/active" />
         <NavLink linkName="Favourite NFTs" to="/favourite-nft" />
@@ -21,10 +26,29 @@ const StyledSidebar = styled.div`
   height: 100%;
 
   .sidebar {
-    padding: 6rem 2rem 0rem 2rem;
+    padding: 0rem 2rem 0rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    &__brand {
+      padding: 1.5rem 0rem 6rem 0rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      color: #d9b954;
+
+      &--name {
+        font-size: 1.2rem;
+        font-style: 600;
+      }
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+    }
   }
 
   @media only screen and (min-width: 280px) and (max-width: 767px) {
@@ -33,10 +57,24 @@ const StyledSidebar = styled.div`
 
     .sidebar {
       padding: 2rem 0.8rem;
+
+      &__brand {
+        padding: 1.5rem 0rem 2rem 0rem;
+
+        &--name {
+          display: none;
+        }
+
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
     }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    position: fixed;
     .sidebar {
       padding: 2rem 0.2rem;
     }

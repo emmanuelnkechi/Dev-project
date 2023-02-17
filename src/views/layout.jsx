@@ -28,7 +28,8 @@ const StyledLayout = styled.div`
     gap: 0.8rem;
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    gap: 0.6rem;
+    gap: 0rem;
+    grid-template-columns: 3fr 9fr;
   }
 `;
 
